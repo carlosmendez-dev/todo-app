@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/assets/index-DZ1ySxV8.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Cw8lu_xI.css">
+  </head>
+  <body class="vh-100 d-flex justify-content-center align-items-center">
+    <div class="card shadow-sm" x-data="{data:[]}">
+      <div class="card-header">Lista de Compra</div>
+      <div class="card-body  overflow-visible">
+
+        <ul class="list-group">
+          <template x-for="item in data">
+            <li class="list-group-item">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault" x-text="item">
+                </label>
+              </div>
+            </li>
+          </template>
+        </ul>
+
+      </div>
+      <div class="card-footer">
+        <div class="input-group">
+          <input class="form-control" x-ref="input">
+          <button class="btn btn-primary border" @click="data.push($refs.input.value)"><i class="bi bi-plus-circle me-2"></i>add</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
